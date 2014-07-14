@@ -1,0 +1,24 @@
+.navbar
+  .container
+    .pull-left
+      %ul.nav
+        %li 
+          %a{href: '#'} 
+            %span.icon= fa_icon 'home' 
+            %span.link-text HOME
+        %li 
+          %a{href: '#'} 
+            %span.icon= fa_icon 'about' 
+            %span.link-text ABOUT
+
+    .pull-right
+      %ul.nav
+        %li 
+          %a{href: new_user_session_path} 
+            %span.icon= fa_icon 'sign-in' 
+            %span.link-text Sign IN
+
+        %li 
+          %a{href: new_user_registration_path} 
+            %span.icon= fa_icon 'register' 
+            %span.link-text Register

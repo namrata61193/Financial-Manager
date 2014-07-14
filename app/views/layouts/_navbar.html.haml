@@ -1,0 +1,38 @@
+.navbar
+  .container
+    .pull-left
+      %ul.nav.nav-primary
+        %li 
+          %a{href: '/'} 
+            %span.icon= fa_icon 'home' 
+            %span.link-text Home
+        %li 
+          %a{href: '#'} 
+            %span.icon= fa_icon 'bell' 
+            %span.link-text Reminders
+        %li 
+          %a{href: '#'} 
+            //%span.icon= fa_icon 'user'
+            %span.link-text My Account 
+
+    .logo Manage My Money
+
+    .pull-right
+      %ul.nav.nav-secondary
+        %li 
+          %a{href: expenses_path}
+            //%span.icon= fa_icon 'money' 
+            %span.link-text Expenses 
+        %li 
+          %a{href: '#'}
+            //%span.icon= fa_icon 'money' 
+            %span.link-text Bills
+        %li 
+          //%span.icon= fa_icon 'sign-out'
+          %a{href: destroy_user_session_path , :method => "delete"}
+            %span.link-text Log Out
+          //=link_to "Log Out", destroy_user_session_path, :method => "delete"
+           
+            
+        
+

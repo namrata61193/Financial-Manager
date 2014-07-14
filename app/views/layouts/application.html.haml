@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %title Financial Manager
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  
+  %body
+    #page{class: "c-#{controller_name}"}
+     
+      - if(current_user)
+        = render 'layouts/navbar'
+        .profile-header
+          = render 'layouts/image_bar'
+      - else
+        = render 'layouts/sign_in'
+        .profile-header
+          = render 'layouts/image_bar'
+
+        
+
+      .container
+        = yield
